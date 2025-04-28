@@ -1,7 +1,4 @@
 import os
-import langchain_community
-import langchain_mistralai
-import langgraph
 
 from langchain_mistralai import ChatMistralAI
 from langgraph.prebuilt import create_react_agent
@@ -9,8 +6,8 @@ from langgraph.checkpoint.memory import MemorySaver
 from langchain_community.tools import TavilySearchResults
 from langchain_core.prompts import ChatPromptTemplate
 
-os.environ["TAVILY_API_KEY"] = "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"
-os.environ["MISTRAL_API_KEY"] = "HfbNtKDE9SEWBpfD91u4hYfI6rvU5WkU"
+os.environ["TAVILY_API_KEY"] = "key"
+os.environ["MISTRAL_API_KEY"] = "key"
 
 prompt = ChatPromptTemplate.from_messages(
     [("system", "Tu es Frederic, un developpeur fullstack."),
